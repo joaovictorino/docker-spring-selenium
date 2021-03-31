@@ -10,9 +10,9 @@ public class BrowserTest {
     public void shouldOpenBrowser() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized"); // open Browser in maximized mode
-        options.addArguments("--disable-infobars"); // disabling infobars
-        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--start-maximized"); 
+        options.addArguments("--disable-infobars"); 
+        options.addArguments("--disable-extensions");
         WebDriver browser = new ChromeDriver(options);
         browser.navigate().to("http://localhost:8080");
     }
