@@ -24,6 +24,7 @@ public class CreateOnwerTest {
 
   @BeforeAll
   public void setUp() {
+    System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
   }
