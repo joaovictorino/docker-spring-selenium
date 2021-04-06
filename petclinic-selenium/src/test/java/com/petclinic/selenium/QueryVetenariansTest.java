@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class QueryVetenariansTest {
     @Test
-    public void shouldQueryVetenarians() {
+    public void testShouldQueryVetenarians() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized"); 

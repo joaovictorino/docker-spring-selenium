@@ -7,10 +7,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.JavascriptExecutor;
-import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,8 +16,6 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.*;
 
 @TestInstance(Lifecycle.PER_CLASS)
@@ -41,7 +37,7 @@ public class CreateOnwersDataTest {
 
   @ParameterizedTest
   @CsvFileSource(resources = "/data/owners.csv")
-  public void createOnwer(String name, String lastName, String address, String city, String phone, String petName, String birthdate, String petType) {
+  public void testCreateOnwer(String name, String lastName, String address, String city, String phone, String petName, String birthdate, String petType) {
     driver.get("http://localhost:8080/");
     driver.manage().window().setSize(new Dimension(1365, 767));
     driver.findElement(By.cssSelector("li:nth-child(2) span:nth-child(2)")).click();

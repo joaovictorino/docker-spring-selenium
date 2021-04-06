@@ -35,7 +35,7 @@ public class CreateOnwerTest {
   }
   
   @Test
-  public void createOnwer() {
+  public void testCreateOnwer() {
     driver.get("http://localhost:8080/");
     driver.manage().window().setSize(new Dimension(1365, 767));
     driver.findElement(By.cssSelector("li:nth-child(2) span:nth-child(2)")).click();
