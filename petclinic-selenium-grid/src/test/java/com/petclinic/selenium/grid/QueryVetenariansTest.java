@@ -16,6 +16,7 @@ public class QueryVetenariansTest {
     @Test
     public void testShouldQueryVetenarians() throws Exception {
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--ignore-certificate-errors"); 
         WebDriver browser = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
         browser.navigate().to("http://172.17.0.1:8080");
         browser.findElement(By.xpath("//*[@id='main-navbar']/ul/li[3]/a")).click();
