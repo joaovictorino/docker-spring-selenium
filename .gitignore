@@ -1,3 +1,7 @@
 target
 drivers
 petclinic-selenium/drivers
+.vscode
+.settings
+petclinic-selenium-grid/.factorypath
+petclinic-selenium-grid/.classpath

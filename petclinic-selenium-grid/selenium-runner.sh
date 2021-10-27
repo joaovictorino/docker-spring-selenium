@@ -1,6 +1,8 @@
 # selenium grid up
 docker-compose up
 
+# Open browser port 4444
+
 # build selenium runner
 docker build -t selenium-runner .
 
