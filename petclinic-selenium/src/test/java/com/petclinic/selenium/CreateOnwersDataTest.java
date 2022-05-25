@@ -25,7 +25,7 @@ public class CreateOnwersDataTest {
 
   @BeforeAll
   public void setUp() {
-    System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+    System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
   }

@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class QueryVetenariansTest {
     @Test
     public void testShouldQueryVetenarians() {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless"); 
         options.addArguments("--window-size=1920,1200"); 

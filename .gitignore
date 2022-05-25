@@ -1,6 +1,4 @@
 target
-drivers
-petclinic-selenium/drivers
 .vscode
 .settings
 petclinic-selenium-grid/.factorypath
