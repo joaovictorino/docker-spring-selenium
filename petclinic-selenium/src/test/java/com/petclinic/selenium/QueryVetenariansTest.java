@@ -16,10 +16,6 @@ public class QueryVetenariansTest {
     public void testShouldQueryVetenarians() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless"); 
-        options.addArguments("--window-size=1920,1200"); 
-        options.addArguments("--ignore-certificate-errors"); 
-        options.addArguments("--disable-extensions");
         WebDriver browser = new ChromeDriver(options);
         browser.navigate().to("http://localhost:8080");
         browser.findElement(By.xpath("//*[@id='main-navbar']/ul/li[3]/a")).click();
