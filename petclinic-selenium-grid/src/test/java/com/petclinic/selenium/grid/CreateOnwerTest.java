@@ -39,6 +39,7 @@ public class CreateOnwerTest {
   
   @Test
   public void testCreateOnwer() {
+    // ip address of host running docker
     driver.navigate().to("http://172.17.0.1:8080");
     driver.findElement(By.cssSelector("li:nth-child(2) span:nth-child(2)")).click();
     driver.findElement(By.linkText("Add Owner")).click();

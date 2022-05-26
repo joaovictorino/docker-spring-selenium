@@ -18,7 +18,10 @@ public class QueryVetenariansTest {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--ignore-certificate-errors"); 
         WebDriver browser = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
+
+        // ip address of host running docker
         browser.navigate().to("http://172.17.0.1:8080");
+        
         browser.findElement(By.xpath("//*[@id='main-navbar']/ul/li[3]/a")).click();
         List<WebElement> elements = browser.findElements(By.xpath("//*[@id='vets']/thead/tr/th[2]"));
         assertTrue(elements.size() > 0);
