@@ -9,14 +9,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class QueryVetenariansTest {
     @Test
     public void testShouldQueryVetenarians() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        WebDriver browser = new ChromeDriver(options);
+        WebDriver browser = new ChromeDriver();
         browser.navigate().to("http://localhost:8080");
         browser.findElement(By.xpath("//*[@id='main-navbar']/ul/li[3]/a")).click();
         List<WebElement> elements = browser.findElements(By.xpath("//*[@id='vets']/thead/tr/th[2]"));
