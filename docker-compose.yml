@@ -4,9 +4,6 @@ networks:
   petclinic:
     driver: bridge
 
-volumes:
-  myapp:
-
 services:
   mysqldb:
     image: mysql:8.0
@@ -25,7 +22,5 @@ services:
       - petclinic
     ports:
       - 8080:8080
-    volumes:
-      - myapp:/home
     depends_on:
       - mysqldb
